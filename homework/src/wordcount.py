@@ -8,8 +8,10 @@ from ._internals.write_count_words import write_count_words
 
 
 def main():
+    input_folder = "data/input/"
+    output_folder = "data/output/"
     # mover a la funcion read_all_lines
-    all_lines = read_all_lines()
+    all_lines = read_all_lines(input_folder)
 
     # mover a la funcion preprocess_lines
     all_lines = preprocess_lines(all_lines)
@@ -20,7 +22,7 @@ def main():
     # mover a la funcion count words
     counter = count_words(words)
 
-    write_count_words(counter)
+    write_count_words(counter, output_folder)
 
 
 if __name__ == "__main__":
